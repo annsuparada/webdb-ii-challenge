@@ -4,7 +4,7 @@ const db = require('../data/db-comfig.js');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    db('cars')
+    db('carDealers')
     .then(cars => {
       res.status(200).json(cars); 
     })

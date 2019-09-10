@@ -2,9 +2,12 @@
 exports.up = function(knex) {
   return knex.schema.createTable('carDealers', tbl => {
     tbl.increments();
-    tbl.text('brand').unique().notNullable()
-    tbl.text('model').unique().notNullable()
-    tbl.integer('year').unique().notNullable()
+    tbl.text('VIN').unique().notNullable()
+    tbl.text('model').notNullable()
+    tbl.integer('mileage').notNullable()
+    tbl.text('make').notNullable()
+    tbl.text('transmission')
+    tbl.text('title')
   });
 };
 
